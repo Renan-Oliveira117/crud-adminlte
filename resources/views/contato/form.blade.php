@@ -24,11 +24,11 @@
           <div class="box-body">
             <div class="form-group">
               <label for="exampleInputEmail1">NOME</label>
-            <input type="text" class="form-control" name="nome"  value={{"$contato->nome ??"}}placeholder="DIGITE NOME">
+            <input type="text" class="form-control" name="nome"  value="{{$contato->nome ??''}}"placeholder="DIGITE NOME">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">TELEFONE</label>
-              <input type="text" class="form-control" name="telefone" value={{"$contato->telefone ??"}} placeholder="DIGITE TELEFONE">
+              <input type="text" class="form-control" name="telefone" value="{{$contato->telefone ??''}}" placeholder="DIGITE TELEFONE">
             </div>
             <button type="submit" class="btn btn-primary">Salva</button>
             <a href="{{route('contatos.index')}}"  class= "btn btn-primary" > Cancelar</a>
@@ -45,6 +45,8 @@
     
     
     </form>
+
+    @endif
       </div>
     
     
