@@ -6,7 +6,9 @@
 
 @include('flash::message')
 
-    <a  class= "btn btn-primary" href="{{route('contatos.create')}}">NOVO CONTATO</a>
+    <a  class= "btn btn-primary" href="{{route('contatos.create')}}">NOVO CONTATO</a> <p></p>
+
+    <a  class="btn btn-success" href="{{route('relatorio.contato')}}">RELATÓRIO</a>
   
 @stop
 

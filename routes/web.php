@@ -20,3 +20,5 @@ Route::get('/dashboard', function(){
 });
 
 Route::resource('contatos' ,'ContatoController');
+
+Route::get('contato/relatorio', 'ContatoController@relatorio')->name('relatorio.contato');

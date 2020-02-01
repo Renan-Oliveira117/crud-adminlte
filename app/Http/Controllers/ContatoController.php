@@ -11,7 +11,21 @@ class ContatoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
+     * 
      */
+
+     public function relatorio(){
+
+        $contatos=Contato::all();
+
+        return \PDF::loadview('contato.pdf',compact('contatos'))->stream();
+
+        //return\PDF::loadview('contato.pdf')->download('relatorio_contatos.pdf');
+
+        //return view('contato.pdf');
+
+     }
     public function index()
     {
         $contatos=Contato::all();
